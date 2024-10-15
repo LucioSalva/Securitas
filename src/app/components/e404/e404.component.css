@@ -1,0 +1,71 @@
+img {
+    height: 250px;
+}
+#cabe{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 60px;
+}
+
+h4{
+    font-size: 30px;
+    color: grey;
+}
+
+.row {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#colh11{
+    margin: 0px;
+    padding: 0px;
+}
+
+#colh22{
+    margin: 0px;
+    padding: 0px;
+}
+
+#h11 {
+    display: flex;
+    justify-content: end;
+    padding: 0px;
+    margin: 15px;
+    font-size: 155px;
+}
+
+#r2 {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    }
+
+#h22 {
+    display: flex;
+    justify-content: start;
+    padding: 0px;
+    margin: 0px;
+    font-size: 155px;
+}
+
+#coli1{
+    display: flex;
+    justify-content: center;
+}
+
+#coli2{
+    display: flex;
+    justify-content: center;
+}
