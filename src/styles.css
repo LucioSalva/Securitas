@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Exo 2', sans-serif;
+}
+
+body.hide-navbar app-nav {
+    display: none;
+}
+
+:root {
+    --a: #003366;
+    --v: #00796B;
+    --g: #B0BEC5;
+    --b: #FFFFFF;
+    --n: #FF7043;
 }

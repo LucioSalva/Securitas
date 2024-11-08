@@ -1,5 +1,16 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Exo 2', sans-serif;
+}
+
+.container-fluid {
+    background-color: #003366;
+}
+
+#slog {
+    display: flex;
+    color: var(--g);
+    font-size: 4rem;
+    margin-top: 80px;
 }
