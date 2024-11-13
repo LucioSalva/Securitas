@@ -1,5 +1,10 @@
-*{
+/* *{
     background-color: black;
+} */
+
+#conatiner{
+    background-color: var(--b);
+    
 }
 img {
     height: 250px;
@@ -11,11 +16,11 @@ img {
 
 h1{
     font-size: 80px;
-    color: white;
+    color: black;
 }
 h2{
     font-size: 60px;
-    color: white;
+    color: black;
 }
 
 h4{
@@ -68,9 +73,39 @@ h4{
 #coli1{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #coli2{
     display: flex;
     justify-content: center;
+}
+
+/* !responsive tablet */
+@media (max-width: 769px){
+    #coli1{
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: -60px;
+    }
+    #row1{
+        background-color: yellow;
+    }
+}
+
+/* !responsive phone */
+
+@media (max-width: 431px) {
+    #r2, #colh22, #colh11 {
+        display: none;
+    }
+    #cabeh, #coli1, #coli2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #coli2{
+        margin-top: 120px;
+    }
 }

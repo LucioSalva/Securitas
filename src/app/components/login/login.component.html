@@ -1,0 +1,37 @@
+<div class="login-container">
+    <div class="login-card">
+      <h2 class="login-title">LOG<span class="text-accent">iN</span></h2>
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="input-with-icon">
+            <i class="user-icon"></i>
+            <input 
+              type="text" 
+              formControlName="username"
+              placeholder="Usuario"
+              class="form-control">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="input-with-icon">
+            <i class="lock-icon"></i>
+            <input 
+              type="password" 
+              formControlName="password"
+              placeholder="Contraseña"
+              class="form-control">
+          </div>
+        </div>
+  
+        <button type="submit" class="btn btn-primary w-100">
+          Ingresar
+        </button>
+  
+        <div class="help-text">
+          Para recuperar tu contraseña contacta al equipo de soporte técnico.
+        </div>
+      </form>
+    </div>
+  </div>
