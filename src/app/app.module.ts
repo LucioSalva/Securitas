@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from './services/auth.service';
@@ -8,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { E404Component } from './components/e404/e404.component';
 import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,7 @@ import { LoginComponent } from './components/login/login.component';
     NavComponent,
     FooterComponent,
     E404Component,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

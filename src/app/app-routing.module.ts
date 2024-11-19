@@ -7,9 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent },
+  {path: 'login', component:LoginComponent},
   {path: 'E404', component:E404Component },
   {path: '**', redirectTo:'/E404', pathMatch:'full' },
-  {path: 'login', component:LoginComponent},
 
   
 ];

@@ -12,5 +12,5 @@ export class NavComponent {
   irAlLogin() {
     this.router.navigate(['/login']);
   }
+  }
 
-}
