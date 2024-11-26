@@ -1,29 +1,44 @@
 <div class="container-fluid">
-    <div class="login-card">
-        <h2 class="login-title">LOG<span class="text-accent">iN</span></h2>
+    <div class="row mt-1">
+        <div class="col mt-3 d-flex justify-content-center">
+            <div class="login-card">
+                <h2 class="login-title">LOG<span class="text-accent">iN</span></h2>
 
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <div class="input-with-icon">
-                    <i class="user-icon"></i>
-                    <input type="text" formControlName="username" placeholder="Usuario" class="form-control">
-                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <div class="input-with-icon">
+                            <i class="user-icon"></i>
+                            <input type="text" formControlName="username" placeholder="Usuario" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-with-icon">
+                            <i class="lock-icon"></i>
+                            <input type="password" formControlName="password" placeholder="Contraseña"
+                                class="form-control">
+                        </div>
+                    </div>
+
+                    <button  type="submit" class="animated-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
+                        <span class="text">E N T R Y</span>
+                        <span class="circle"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
+                    </button>
+                </form>
             </div>
-
-            <div class="form-group">
-                <div class="input-with-icon">
-                    <i class="lock-icon"></i>
-                    <input type="password" formControlName="password" placeholder="Contraseña" class="form-control">
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">
-                Ingresar
-            </button>
-
-            <div class="help-text">
-                Para recuperar tu contraseña contacta al equipo de soporte técnico.
-            </div>
-        </form>
+          </div>
+          <div class="help-text mt-5 mb-5">
+              Para recuperar tu contraseña contacta al equipo de soporte técnico.
+          </div>
     </div>
 </div>

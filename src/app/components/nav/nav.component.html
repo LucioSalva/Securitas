@@ -1,13 +1,52 @@
-<div class="container-fluid ">
-    <div class="row">
-        <div class="col">
-            <nav id="nav1" class="fixed-top d-flex mt-3" style="border-radius: 30px; height: 60px;">
-                <h3 id="insu" class="align-content-center mt-1">INSURICARE</h3>
-                <div class="align-content-center justify-content-evenly" style="margin-left: 830px;">
-                    <img id="imageus" src="/images/casa-inteligente.png" alt="Ir a Home">
-                    <img id="imageusu" src="/images/computadora-portatil.png" alt="Ir al Login" (click)="irAlLogin()">
-                </div>
-            </nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Menú para pantallas grandes (md y más) -->
+      <nav id="nav1" class="fixed-top d-none d-md-flex mt-3 position-relative"
+        style="border-radius: 30px; height: 60px;">
+        <h3 id="insu" class="ms-3 my-0">INSURICARE</h3>
+        <div class="d-flex justify-content-end align-items-center position-absolute end-0 top-50 translate-middle-y">
+
+          <img *ngIf="!isLoginPage()" id="imageusu" class="me-5 position-absolute end-0" src="/images/computadora-portatil.png"
+            alt="Ir al Login" (click)="irAlLogin()">
+
+          <img *ngIf="!isHomePage()" id="imageus" class="me-2 position-static" src="/images/casa-inteligente.png"
+            alt="Ir a Home" (click)="irHome()">
         </div>
+      </nav>
+
+      <!-- Menú de hamburguesa para pantallas pequeñas -->
+      <nav class="navbar navbar-dark  d-md-none fixed-top">
+        <div class="container-fluid">
+          <h3 id="insu-mobile" class="navbar-brand mt-3 ms-2">INSURICARE</h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">INSURICARE</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                <li *ngIf="!isLoginPage()" class="nav-item text-center my-3">
+                  <img id="imageusu-mobile" class="img-fluid" style="max-width: 100px;"
+                    src="/images/computadora-portatil.png" alt="Ir al Login" (click)="irAlLogin()">
+                </li>
+
+                <li *ngIf="!isHomePage()" class="nav-item text-center my-3">
+                  <img id="imageus-mobile" class="img-fluid" style="max-width: 100px;"
+                    src="/images/casa-inteligente.png" alt="Ir a Home" (click)="irHome()">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
+  </div>
 </div>

@@ -5,7 +5,7 @@
 }
 
 /* !fondo */
-.container-fluid {
+/* .container-fluid {
   width: 100%;
   height: 100%;
   --s: 37px;
@@ -17,7 +17,7 @@
     var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
     var(--g3) 0 calc(1.73 * var(--s)) #1e1e1e;
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
-}
+} */
 /* !fondo */
 
 #slog {
@@ -37,3 +37,12 @@
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
     -15px -15px 30px rgb(60, 60, 60);
 }
+
+
+/* ! primera info */
+
+#info1{
+  border-radius: 62% 38% 81% 19% / 22% 92% 8% 78%;
+
+}
+

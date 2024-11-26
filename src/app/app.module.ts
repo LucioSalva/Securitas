@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { E404Component } from './components/e404/e404.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OutilsComponent } from './components/outils/outils.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     E404Component,
     LoginComponent,
+    OutilsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,48 +1,149 @@
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #002147 50%, #ff6f47 50%);
+    filter: blur(3px) brightness(80%);
   }
-  
+
+
   .login-card {
-    background: white;
+    /* background: var(--b); */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    box-shadow: 10px 15px 18px 10px var(--ne);
   }
-  
+
   .login-title {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--g);
   }
-  
+
   .text-accent {
-    color: #ff6f47;
+    color: var(--n);
   }
-  
+
   .input-with-icon {
     position: relative;
     margin-bottom: 1.5rem;
   }
-  
+
   .form-control {
     padding-left: 40px;
     height: 50px;
     border-radius: 5px;
   }
-  
+
   .help-text {
+    box-shadow: 15px 8px 10px var(--ne);
     text-align: center;
     margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-    background: #ffeb3b;
+    font-size: 1rem;
+    color: var(--ne);
+    background: #ffe606;
     padding: 0.5rem;
     border-radius: 4px;
   }
+
+  /* !Button */
+  /* From Uiverse.io by ryota1231 */
+.animated-button {
+  margin-top: 50px;
+  margin-left: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: var(--b);
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--a);
+  box-shadow: 0 0 0 2px var(--ne);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--a);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--v);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: var(--a);
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #1f387e;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #adff2f;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
