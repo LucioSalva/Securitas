@@ -1,44 +1,52 @@
-<div class="container-fluid">
-    <div class="row mt-1">
-        <div class="col mt-3 d-flex justify-content-center">
-            <div class="login-card">
-                <h2 class="login-title">LOG<span class="text-accent">iN</span></h2>
-
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="user-icon"></i>
-                            <input type="text" formControlName="username" placeholder="Usuario" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-with-icon">
-                            <i class="lock-icon"></i>
-                            <input type="password" formControlName="password" placeholder="Contraseña"
-                                class="form-control">
-                        </div>
-                    </div>
-
-                    <button  type="submit" class="animated-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-                            <path
-                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                            </path>
-                        </svg>
-                        <span class="text">E N T R Y</span>
-                        <span class="circle"></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-                            <path
-                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                            </path>
-                        </svg>
-                    </button>
-                </form>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="container-login mt-5">
+        <div class="heading">Inicia sesión y retoma el control</div>
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="form" action="">
+          <div class="form-group">
+            <input type="email" id="email" name="email" [(ngModel)]="email" required email #emailInput="ngModel"
+              class="form-control input" placeholder="E-mail">
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+              <small *ngIf="emailInput.errors?.['required']">El correo es obligatorio</small>
+              <small *ngIf="emailInput.errors?.['email']">Ingrese un correo electrónico válido</small>
             </div>
           </div>
-          <div class="help-text mt-5 mb-5">
-              Para recuperar tu contraseña contacta al equipo de soporte técnico.
+          <div class="form-group">
+            <input type="password" id="password" name="password" [(ngModel)]="password" required minlength="6"
+              maxlength="6" #passwordInput="ngModel" class="form-control input" placeholder="Contraseña">
+            <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="error-message">
+              <small *ngIf="passwordInput.errors?.['required']">La contraseña es obligatoria</small>
+              <small *ngIf="passwordInput.errors?.['minlength'] || passwordInput.errors?.['maxlength']">
+                La contraseña debe tener exactamente 6 caracteres
+              </small>
+            </div>
           </div>
+          <button type="submit" [disabled]="!loginForm.form.valid" class="login-button btn btn-primary">
+            Sing In
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="error">
+        <div class="error__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+            <path fill="#393a37"
+              d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+            </path>
+          </svg>
+        </div>
+        <div class="error__title">¿Olvidaste tu contraseña? No te preocupes, contacta a nuestro equipo de soporte
+          técnico y con gusto te ayudaremos a restablecerla.</div>
+        <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20">
+            <path fill="#393a37"
+              d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+            </path>
+          </svg></div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-e404',
+  standalone: false,
   templateUrl: './e404.component.html',
   styleUrl: './e404.component.css'
 })
