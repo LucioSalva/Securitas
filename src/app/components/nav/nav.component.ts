@@ -25,7 +25,7 @@ export class NavComponent {
 
   irAlLogin() {
     this.cerrarOffcanvas();
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
   irHome(){
     this.cerrarOffcanvas();

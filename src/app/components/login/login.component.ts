@@ -19,7 +19,7 @@ export class LoginComponent {
 
     if (emailRegex.test(this.email) && this.password.length === 6) {
 
-      this.router.navigate(['outlis']);
+      this.router.navigate(['home']);
     } else {
 
       alert('Por favor, verifique su correo y contraseña');

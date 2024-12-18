@@ -4,21 +4,23 @@
       <!-- Menú para pantallas grandes (md y más) -->
       <nav id="nav1" class="fixed-top d-none d-md-flex mt-3 position-relative"
         style="border-radius: 30px; height: 60px;">
-        <h3 id="insu" class="ms-3 my-0">INSURICARE</h3>
+        <h3 id="insu" class="">INSURICARE</h3>
         <div class="d-flex justify-content-end align-items-center position-absolute end-0 top-50 translate-middle-y">
+
+          <img src="/images/ico.webp" alt="" width="65px" style="margin-right: 600px; margin-top: -5px;">
 
           <img *ngIf="!isLoginPage()" id="imageusu" class="me-5 position-absolute end-0" src="/images/computadora-portatil.png"
             alt="Ir al Login" (click)="irAlLogin()">
 
-          <img *ngIf="!isHomePage()" id="imageus" class="me-2 position-static" src="/images/casa-inteligente.png"
-            alt="Ir a Home" (click)="irHome()">
+          <!-- <img *ngIf="!isHomePage()" id="imageus" class="me-2 position-static" src="/images/casa-inteligente.png"
+            alt="Ir a Home" (click)="irHome()"> -->
         </div>
       </nav>
 
       <!-- Menú de hamburguesa para pantallas pequeñas -->
       <nav class="navbar navbar-dark  d-md-none fixed-top">
         <div class="container-fluid">
-          <h3 id="insu-mobile" class="navbar-brand mt-3 ms-2">INSURICARE</h3>
+          <h3 id="insu-mobile" class="navbar-brand">INSURICARE</h3>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
